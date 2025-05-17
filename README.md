@@ -1,59 +1,107 @@
-# InvectaReborn
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+# Invecta - Frontend (Angular 16)
 
-## Development server
+This repository contains the frontend layer of the **Invecta** system, developed as part of the Capstone Project for the Computer Engineering course at Universidade de Sorocaba (UNISO). The application aims to provide a web solution for inventory control, sales, purchases, and management of customers, products, and users, specifically targeting small and medium-sized businesses.
 
-To start a local development server, run:
+## 👨‍💻 Frontend Developer
 
-```bash
-ng serve
-```
+**Gabriel Ramalho Resende**  
+Responsible for the entire Angular 16 frontend structure, including:
+- Component-based architecture and layout reuse
+- Login and registration pages
+- Integration with simulated HTTP services
+- Setup for backend integration (Spring Boot + JWT)
+- Best practices in folder structure, responsiveness, and Angular directives usage
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📦 Technologies Used
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [Angular 16](https://angular.io/)
+- TypeScript
+- HTML5 + SCSS
+- Angular Router
+- Angular HttpClient (prepared for API consumption)
+- Template-driven Forms
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Frontend Features
 
-```bash
-ng generate --help
-```
+- [x] **Login** page
+- [x] **Registration** page
+- [x] Generic layout with `@Input()` and `@Output()` for reuse
+- [x] Communication with `AuthService`
+- [x] Structure ready to receive and send user data
+- [x] Prepared for **JWT** authentication
+- [x] Page navigation using Angular `Router`
+- [x] Ready for API consumption via `HttpClient`
 
-## Building
+> ⚠️ **The frontend was prepared for backend integration, but I did not implement a database or a functional API.** Integration will be handled by another team member responsible for the Java (Spring Boot) backend.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## 📂 Folder Structure
 
 ```bash
-ng e2e
+src/
+├── app/
+│   ├── components/
+│   │   └── default-login-layout/   # Base layout for Login and Registration
+│   ├── pages/
+│   │   ├── login/                  # Login page
+│   │   └── register/               # Registration page
+│   ├── services/
+│   │   ├── auth.service.ts         # Authentication service
+│   │   └── user.model.ts           # User interface
+│   └── app.routes.ts               # Route definitions
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🛠️ How to Run
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/invecta-frontend.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the application**:
+   ```bash
+   ng serve
+   ```
+
+4. Open in your browser:
+   ```
+   http://localhost:4200
+   ```
+
+---
+
+## 🔌 Simulated API (for future integration)
+
+The login and registration methods are ready to connect with the following API:
+
+| Endpoint             | Method | Description          |
+|----------------------|--------|----------------------|
+| `/api/auth/login`    | POST   | User authentication  |
+| `/api/auth/register` | POST   | User registration    |
+
+---
+
+## 📌 Notes
+
+- Input data is controlled via `@Input()` and `@Output()` using `[(ngModel)]`, allowing modularity between layout and page components.
+- The system is **ready for JWT-based authentication**, which will be implemented on the backend side.
+
+---
+
+## 📫 Contact
+
+Gabriel Ramalho Resende   
+LinkedIn: [linkedin.com/in/gabriel-resende](https://www.linkedin.com/in/gabriel-resende-86790820a/)
