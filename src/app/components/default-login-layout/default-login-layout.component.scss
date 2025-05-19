@@ -41,7 +41,10 @@ main {
             color: white;
             padding-left: 20px;
             font-size: 20px;
+            cursor: pointer;
         }
+
+
 
         .options {
             display: flex;
@@ -55,6 +58,7 @@ main {
             height: 35px;
             width: 25%;
             border-radius: 25px;
+            cursor: pointer;
         }
     }
 
@@ -64,5 +68,9 @@ main {
         align-items: center;
         justify-content: center;
         width: 100%;
+
+        .logo {
+            height: 200px;
+        }
     }
 }

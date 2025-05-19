@@ -1,0 +1,17 @@
+<app-default-main-layout>
+  <div class="product-container">
+    <div *ngFor="let product of products" class="product-card">
+      <h2>{{ product.name }}</h2>
+      <p><strong>Preço:</strong> R$ {{ product.unitPrice | number:'1.2-2' }}</p>
+      <p><strong>Quantidade:</strong> {{ product.quantity }}</p>
+      <p><strong>Descrição:</strong> {{ product.description || 'Sem descrição' }}</p>
+      
+      <!-- Preparado para integração -->
+      <div class="actions">
+        <button class="edit">Editar</button>
+        <button class="delete">Remover</button>
+      </div>
+    </div>
+  </div>
+</app-default-main-layout>
+
