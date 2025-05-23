@@ -8,24 +8,19 @@ export interface Product {
   unitPrice: number;
   quantity: number;
   description?: string;
-  supplier?: any; // Pode ser tipado futuramente se quiser
+  supplier?: any;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:8080/api/products'; // Altere conforme seu endpoint real
+  private apiUrl = 'http://localhost:8080/api/products';
 
   constructor(private http: HttpClient) {}
 
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
-  }
-
-  // Preparado para funcionalidades futuras:
-  getProductById(id: number): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 
   addProduct(product: Product): Observable<Product> {
