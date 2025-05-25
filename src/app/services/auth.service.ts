@@ -11,11 +11,16 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  register(user: User): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, user);
+  register(user: any) {
+    return this.http.post('http://localhost:8080/api/users', user, {
+      withCredentials: false
+    });
   }
 
-  login(credentials: { email: string; password: string }): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, credentials);
+
+  login(credentials: any) {
+    return this.http.post('http://localhost:8080/api/users', credentials, {
+      withCredentials: false
+    });
   }
 }
